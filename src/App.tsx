@@ -1,6 +1,7 @@
 import { Navbar } from './pages/navbar/navbar';
 import { Hero } from './pages/hero/hero';
 import { About } from './pages/about/about';
+import { Services } from './pages/services/services';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
          <main>
         <Hero />
         <About />
+        <Services />
       </main>
     </div>
   );
