@@ -249,3 +249,16 @@
     @apply outline-ring outline-2 outline-offset-2;
   }
 }
+
+@theme {
+  --font-sans: "Lexend", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #f2df0d;
+  --color-background-light: #f8f8f5;
+  --color-background-dark: #222110;
+}
+
+@layer base {
+  body {
+    @apply bg-background-light text-slate-900 antialiased;
+  }
+}
