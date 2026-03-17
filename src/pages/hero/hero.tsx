@@ -5,7 +5,7 @@ import heroImage from '../../assets/Premium_gym_website_hero_section_ultrarealis
 
 export const Hero = () => {
   return (
-    <section className="relative h-[870px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden" id="home">
       <div className="absolute inset-0 z-0">
         <img 
           className="w-full h-full object-cover brightness-50" 
