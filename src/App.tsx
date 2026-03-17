@@ -1,5 +1,6 @@
 import { Navbar } from './pages/navbar/navbar';
 import { Hero } from './pages/hero/hero';
+import { About } from './pages/about/about';
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
          <main>
         <Hero />
+        <About />
       </main>
     </div>
   );
