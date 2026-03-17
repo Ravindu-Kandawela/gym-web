@@ -1,8 +1,11 @@
+import { Navbar } from './pages/navbar/navbar';
+
+
 function App() {
   return (
-    <>
-      <h1 className="text-primary text-3xl">hello world</h1>
-    </>
+      <div className="min-h-screen bg-background-light selection:bg-primary selection:text-slate-900">
+      <Navbar />
+    </div>
   );
 }
 
