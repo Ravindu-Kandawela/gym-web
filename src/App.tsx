@@ -4,14 +4,14 @@ import 'lenis/dist/lenis.css';
 import { Toaster } from 'sonner';
 import { ArrowUp, ArrowDown } from 'lucide-react';
 import { motion } from 'motion/react';
-import { Navbar } from './pages/navbar/navbar';
+import { Navbar } from './components/navbar/navbar';
 import { Hero } from './pages/hero/hero';
 import { About } from './pages/about/about';
 import { Services } from './pages/services/services';
 import { Membership } from './pages/membership/membership';
 import { Trainers } from './pages/trainers/trainers';
 import { Contact } from './pages/contact/contact';
-import { Footer } from './pages/footer/footer';
+import { Footer } from './components/footer/footer';
 
 function App() {
   const lenisRef = useRef<Lenis | null>(null);
