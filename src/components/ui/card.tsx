@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+interface CardProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "onDrag" | "onDragStart" | "onDragEnd" | "onAnimationStart"> {
   children: React.ReactNode;
   className?: string;
   hover?: boolean;

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Dumbbell, User, Users, Zap } from 'lucide-react';
 
 export const navLinks = [

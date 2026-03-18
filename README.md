@@ -14,30 +14,7 @@ I built this project using some of my favorite modern web tools:
 - Lucide React: For crisp, lightweight SVG icons.
 
 
-Project Architecture & Folder Structure:
 
-Here is an overview of how I organize a clean, scalable React project:
-
-src/
-├── assets/         (Static images and visual assets)
-├── components/     (Reusable global components)
-│   └── ui/         (Granular UI parts like Buttons & Forms)
-├── constants/      (Global data arrays to keep components clean)
-├── pages/          (Major layout sections driving the app)
-│   └── component components...
-├── services/       (API calls and external logic scripts)
-├── App.tsx         (Main layout wrapper and section assembler)
-├── index.css       (Global Tailwind CSS rules and variables)
-└── main.tsx        (React DOM entry point)
-
-
-Bonus Points Criteria Checklist:
-
-✓ Dark mode: Fully implemented a global dark mode toggle using Tailwind's dark utility and localStorage to persist user preference.
-✗ Search / filter functionality: Not currently implemented.
-✓ Animations: Fully implemented smooth scrolling with Lenis, and complex scroll-triggered component reveal animations using Framer Motion (`motion/react`).
-✓ API integration: Fully implemented integrating the EmailJS API to securely process and dispatch live emails via REST endpoint.
-✓ Advanced form handling: Fully implemented using Zod schema validation to strictly validate user inputs, catch errors dynamically, and provide seamless UI feedback via Sonner toasts before firing API logic.
 
 How to Run It Locally:
 
@@ -61,8 +38,11 @@ npm run dev
 (or yarn dev)
 Pop open your browser to http://localhost:5173 and you are good to go.
 
+Figma Link:
+https://www.figma.com/design/vu2AX3BpLpLvfxPk1Y3Grf/Untitled?node-id=0-1&t=GHB2dSyDfVJJbYg8-1
+
 
 Live Link:
 
 You can check out the live site running here:
-[Insert Your Live Link Here]
+https://gym-web-teal-eta.vercel.app/

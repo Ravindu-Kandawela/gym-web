@@ -1,6 +1,7 @@
 import React from 'react';
+import { motion } from 'motion/react';
 
-interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
+interface ButtonProps extends Omit<React.ComponentPropsWithoutRef<'button'>, "onAnimationStart" | "onDrag" | "onDragStart" | "onDragEnd"> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   fullWidth?: boolean;
@@ -36,11 +37,14 @@ export const Button = ({
   const widthStyle = fullWidth ? 'w-full' : '';
 
   return (
-    <button 
+    <motion.button 
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: "spring", stiffness: 400, damping: 17 }}
       className={`${baseStyles} ${variants[variant]} ${sizes[size]} ${widthStyle} ${className}`}
-      {...props}
+      {...(props as any)}
     >
       {children}
-    </button>
+    </motion.button>
   );
 };
