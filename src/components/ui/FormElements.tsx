@@ -16,7 +16,7 @@ export const Input = ({ label, className = '', error, ...props }: InputProps) =>
         {label}
       </label>
       <input
-        className={`w-full px-4 py-3 rounded border bg-white focus:ring-2 outline-none transition-all ${className}`}
+        className={`w-full px-4 py-3 rounded border bg-white dark:bg-slate-800 dark:border-slate-700 dark:text-white focus:ring-2 outline-none transition-all ${className}`}
         style={
           error
             ? { borderColor: '#f87171', boxShadow: '0 0 0 2px rgba(248, 113, 113, 0.3)' }
@@ -49,7 +49,7 @@ export const Textarea = ({ label, className = '', error, ...props }: TextareaPro
         {label}
       </label>
       <textarea
-        className={`w-full px-4 py-3 rounded border bg-white focus:ring-2 outline-none transition-all ${className}`}
+        className={`w-full px-4 py-3 rounded border bg-white dark:bg-slate-800 dark:border-slate-700 dark:text-white focus:ring-2 outline-none transition-all ${className}`}
         style={
           error
             ? { borderColor: '#f87171', boxShadow: '0 0 0 2px rgba(248, 113, 113, 0.3)' }
