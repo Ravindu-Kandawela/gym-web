@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { z } from 'zod';
+import { motion } from 'motion/react';
 import { toast } from 'sonner';
 import { SectionHeader } from '../../components/ui/SectionHeader';
 import { Input, Textarea } from '../../components/ui/FormElements';
@@ -77,13 +78,19 @@ export const Contact = () => {
   };
 
   return (
-    <section className="py-24 px-6 md:px-20 bg-white dark:bg-slate-950 transition-colors duration-300" id="contact">
+    <section className="py-24 px-6 md:px-20 bg-background-light dark:bg-[#080808] transition-colors duration-300" id="contact">
       <div className="max-w-4xl mx-auto">
         <SectionHeader
           title="Get In Touch"
           description="Ready to start? Send us a message and we'll get you set up."
         />
-        <div className="space-y-6 bg-background-light dark:bg-slate-900 p-8 md:p-12 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 transition-colors duration-300">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="space-y-6 bg-background-light dark:bg-[#333333] p-8 md:p-12 rounded-xl shadow-sm border border-[#3d3322]/20 dark:border-[#3d3322] transition-colors duration-300"
+        >
           <div className="grid md:grid-cols-2 gap-6">
             <Input
               label="Full Name"
@@ -118,11 +125,11 @@ export const Contact = () => {
             onClick={handleButtonClick}
             disabled={isSending}
             className="w-full py-4 text-lg font-bold uppercase tracking-wider rounded transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-            style={{ backgroundColor: '#f2df0d', color: '#1e293b' }}
+            style={{ backgroundColor: '#d4a017', color: '#080808' }}
           >
             {isSending ? 'Sending...' : 'Send Message'}
           </button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

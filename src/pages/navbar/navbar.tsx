@@ -24,7 +24,7 @@ export const Navbar = () => {
   }, [isDark]);
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-background-light/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-6 md:px-20 py-4 transition-colors duration-300">
+    <header className="fixed top-0 w-full z-50 bg-background-light/80 dark:bg-[#080808]/80 backdrop-blur-md border-b border-slate-200 dark:border-[#3d3322] px-6 md:px-20 py-4 transition-colors duration-300">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2 shrink-0">
           <img src={logo} alt="Apex Fitness Logo" className="w-10 h-10 object-contain shrink-0" />
@@ -70,7 +70,7 @@ export const Navbar = () => {
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="lg:hidden absolute top-full left-0 w-full bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 p-6 flex flex-col gap-4 shadow-xl"
+          className="lg:hidden absolute top-full left-0 w-full bg-background-light dark:bg-[#080808] border-b border-slate-200 dark:border-[#3d3322] p-6 flex flex-col gap-4 shadow-xl"
         >
           {navLinks.map((link) => (
             <a 
