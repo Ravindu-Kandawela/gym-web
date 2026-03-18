@@ -77,13 +77,13 @@ export const Contact = () => {
   };
 
   return (
-    <section className="py-24 px-6 md:px-20 bg-white" id="contact">
+    <section className="py-24 px-6 md:px-20 bg-white dark:bg-slate-950 transition-colors duration-300" id="contact">
       <div className="max-w-4xl mx-auto">
         <SectionHeader
           title="Get In Touch"
           description="Ready to start? Send us a message and we'll get you set up."
         />
-        <div className="space-y-6 bg-background-light p-8 md:p-12 rounded-xl shadow-sm border border-slate-100">
+        <div className="space-y-6 bg-background-light dark:bg-slate-900 p-8 md:p-12 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 transition-colors duration-300">
           <div className="grid md:grid-cols-2 gap-6">
             <Input
               label="Full Name"

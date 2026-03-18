@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 interface SectionHeaderProps {
   label?: string;
@@ -16,8 +16,8 @@ export const SectionHeader = ({
   light = false 
 }: SectionHeaderProps) => {
   const alignmentClass = align === 'center' ? 'text-center' : 'text-left';
-  const textColor = light ? 'text-white' : 'text-slate-900';
-  const descColor = light ? 'text-slate-300' : 'text-slate-600';
+  const textColor = light ? 'text-white' : 'text-slate-900 dark:text-white';
+  const descColor = light ? 'text-slate-300' : 'text-slate-600 dark:text-slate-400';
 
   return (
     <div className={`${alignmentClass} mb-16 max-w-3xl ${align === 'center' ? 'mx-auto' : ''}`}>

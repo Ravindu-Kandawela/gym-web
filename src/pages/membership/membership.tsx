@@ -1,4 +1,3 @@
-import React from 'react';
 import { CheckCircle, XCircle } from 'lucide-react';
 import { plans } from '../../constants/constant';
 import { SectionHeader } from '../../components/ui/SectionHeader';
@@ -6,7 +5,7 @@ import { Button } from '../../components/ui/button';
 
 export const Membership = () => {
   return (
-    <section className="py-24 px-6 md:px-20 bg-white" id="membership">
+    <section className="py-24 px-6 md:px-20 bg-white dark:bg-slate-950 transition-colors duration-300" id="membership">
       <SectionHeader 
         title="Membership Plans"
         description="Choose the level that fits your ambition."
@@ -18,7 +17,7 @@ export const Membership = () => {
             className={`relative rounded-xl p-8 flex flex-col h-full transition-all ${
               plan.popular 
               ? 'border-2 border-primary shadow-xl bg-slate-900 text-white scale-105 z-10' 
-              : 'border border-slate-200 shadow-sm'
+              : 'border border-slate-200 dark:border-slate-800 shadow-sm bg-white dark:bg-slate-900 dark:text-white'
             }`}
           >
             {plan.popular && (
@@ -45,7 +44,7 @@ export const Membership = () => {
             <Button 
               fullWidth
               variant={plan.popular ? 'primary' : 'outline'}
-              className={!plan.popular ? 'border-slate-900 hover:bg-slate-900 hover:text-white' : ''}
+              className={!plan.popular ? 'border-slate-900 dark:border-white dark:text-white hover:bg-slate-900 dark:hover:bg-white dark:hover:text-slate-900 hover:text-white' : ''}
             >
               Select Plan
             </Button>
