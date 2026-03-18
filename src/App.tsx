@@ -1,9 +1,11 @@
+import { Toaster } from 'sonner';
 import { Navbar } from './pages/navbar/navbar';
 import { Hero } from './pages/hero/hero';
 import { About } from './pages/about/about';
 import { Services } from './pages/services/services';
 import { Membership } from './pages/membership/membership';
 import { Trainers } from './pages/trainers/trainers';
+import { Contact } from './pages/contact/contact';
 
 
 function App() {
@@ -16,7 +18,10 @@ function App() {
         <Services />
         <Membership />
         <Trainers />
+        <Contact />
+
       </main>
+      <Toaster position="top-right" richColors />
     </div>
   );
 }
