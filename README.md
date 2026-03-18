@@ -14,6 +14,31 @@ I built this project using some of my favorite modern web tools:
 - Lucide React: For crisp, lightweight SVG icons.
 
 
+Project Architecture & Folder Structure:
+
+Here is an overview of how I organize a clean, scalable React project:
+
+src/
+├── assets/         (Static images and visual assets)
+├── components/     (Reusable global components)
+│   └── ui/         (Granular UI parts like Buttons & Forms)
+├── constants/      (Global data arrays to keep components clean)
+├── pages/          (Major layout sections driving the app)
+│   └── component components...
+├── services/       (API calls and external logic scripts)
+├── App.tsx         (Main layout wrapper and section assembler)
+├── index.css       (Global Tailwind CSS rules and variables)
+└── main.tsx        (React DOM entry point)
+
+
+Bonus Points Criteria Checklist:
+
+✓ Dark mode: Fully implemented a global dark mode toggle using Tailwind's dark utility and localStorage to persist user preference.
+✗ Search / filter functionality: Not currently implemented.
+✓ Animations: Fully implemented smooth scrolling with Lenis, and complex scroll-triggered component reveal animations using Framer Motion (`motion/react`).
+✓ API integration: Fully implemented integrating the EmailJS API to securely process and dispatch live emails via REST endpoint.
+✓ Advanced form handling: Fully implemented using Zod schema validation to strictly validate user inputs, catch errors dynamically, and provide seamless UI feedback via Sonner toasts before firing API logic.
+
 How to Run It Locally:
 
 If you want to pull this down and run it on your own machine, it is super easy.

@@ -1,5 +1,4 @@
-
-
+import { motion } from 'motion/react';
 interface SectionHeaderProps {
   label?: string;
   title: string;
@@ -20,7 +19,13 @@ export const SectionHeader = ({
   const descColor = light ? 'text-slate-300' : 'text-slate-600 dark:text-slate-400';
 
   return (
-    <div className={`${alignmentClass} mb-16 max-w-3xl ${align === 'center' ? 'mx-auto' : ''}`}>
+    <motion.div 
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+      className={`${alignmentClass} mb-16 max-w-3xl ${align === 'center' ? 'mx-auto' : ''}`}
+    >
       {label && (
         <span className="text-primary font-bold tracking-widest uppercase text-sm block mb-4">
           {label}
@@ -34,6 +39,6 @@ export const SectionHeader = ({
           {description}
         </p>
       )}
-    </div>
+    </motion.div>
   );
 };

@@ -1,23 +1,28 @@
 import { CheckCircle, XCircle } from 'lucide-react';
+import { motion } from 'motion/react';
 import { plans } from '../../constants/constant';
 import { SectionHeader } from '../../components/ui/SectionHeader';
 import { Button } from '../../components/ui/button';
 
 export const Membership = () => {
   return (
-    <section className="py-24 px-6 md:px-20 bg-white dark:bg-slate-950 transition-colors duration-300" id="membership">
+    <section className="py-24 px-6 md:px-20 bg-background-light dark:bg-[#080808] transition-colors duration-300" id="membership">
       <SectionHeader 
         title="Membership Plans"
         description="Choose the level that fits your ambition."
       />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {plans.map((plan) => (
-          <div 
+        {plans.map((plan, index) => (
+          <motion.div 
             key={plan.name}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
             className={`relative rounded-xl p-8 flex flex-col h-full transition-all ${
               plan.popular 
-              ? 'border-2 border-primary shadow-xl bg-slate-900 text-white scale-105 z-10' 
-              : 'border border-slate-200 dark:border-slate-800 shadow-sm bg-white dark:bg-slate-900 dark:text-white'
+              ? 'border-2 border-primary shadow-xl bg-[#080808] text-white scale-105 z-10' 
+              : 'border border-slate-200 dark:border-[#3d3322] shadow-sm bg-background-light dark:bg-[#333333] dark:text-[#f0ebe3]'
             }`}
           >
             {plan.popular && (
@@ -44,11 +49,11 @@ export const Membership = () => {
             <Button 
               fullWidth
               variant={plan.popular ? 'primary' : 'outline'}
-              className={!plan.popular ? 'border-slate-900 dark:border-white dark:text-white hover:bg-slate-900 dark:hover:bg-white dark:hover:text-slate-900 hover:text-white' : ''}
+              className={!plan.popular ? 'border-[#333333] dark:border-[#f0ebe3] dark:text-[#f0ebe3] hover:bg-[#333333] dark:hover:bg-[#f0ebe3] dark:hover:text-[#080808] hover:text-[#f0ebe3]' : ''}
             >
               Select Plan
             </Button>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

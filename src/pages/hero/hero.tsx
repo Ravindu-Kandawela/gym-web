@@ -38,7 +38,11 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex flex-col md:flex-row gap-4 justify-center"
         >
-          <Button size="lg" className="hover:scale-105">
+          <Button 
+            size="lg" 
+            className="hover:scale-105"
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+          >
             Start Your Journey
           </Button>
           <Button variant="outline" size="lg" className="border-white text-white hover:!bg-white hover:!text-black">
