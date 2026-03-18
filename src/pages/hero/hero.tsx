@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { motion } from 'motion/react';
 import { Button } from '../../components/ui/button';
 import heroImage from '../../assets/Premium_gym_website_hero_section_ultrarealistic_mo_delpmaspu.png';
