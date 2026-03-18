@@ -3,6 +3,7 @@ import { Hero } from './pages/hero/hero';
 import { About } from './pages/about/about';
 import { Services } from './pages/services/services';
 import { Membership } from './pages/membership/membership';
+import { Trainers } from './pages/trainers/trainers';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <About />
         <Services />
         <Membership />
+        <Trainers />
       </main>
     </div>
   );
