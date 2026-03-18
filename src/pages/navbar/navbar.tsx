@@ -30,9 +30,11 @@ export const Navbar = () => {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Button className="hidden md:block">
-            Join Now
-          </Button>
+          <a href="#contact">
+            <Button className="hidden md:block">
+              Join Now
+            </Button>
+          </a>
           <button 
             className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -59,9 +61,11 @@ export const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <Button fullWidth>
-            Join Now
-          </Button>
+          <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+            <Button fullWidth>
+              Join Now
+            </Button>
+          </a>
         </motion.div>
       )}
     </header>
