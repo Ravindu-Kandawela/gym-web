@@ -1,9 +1,9 @@
-
+import { motion } from 'motion/react';
 import { SectionHeader } from '../../components/ui/SectionHeader';
 
 export const About = () => {
   return (
-    <section className="py-24 px-6 md:px-20 bg-white dark:bg-slate-950 transition-colors duration-300" id="about">
+    <section className="py-24 px-6 md:px-20 bg-background-light dark:bg-[#080808] transition-colors duration-300" id="about">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div className="space-y-6">
           <SectionHeader 
@@ -12,7 +12,13 @@ export const About = () => {
             title="PUSHING BOUNDARIES SINCE DAY ONE"
             description="At Apex Fitness, we don't just provide equipment; we build communities. Our mission is to provide a high-energy environment where every individual can achieve their peak physical condition through expert coaching and cutting-edge science."
           />
-          <div className="grid grid-cols-2 gap-6 pt-4">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="grid grid-cols-2 gap-6 pt-4"
+          >
             <div className="border-l-4 border-primary pl-4">
               <h4 className="text-3xl font-black">15+</h4>
               <p className="text-sm uppercase font-bold text-slate-500">Expert Trainers</p>
@@ -21,9 +27,15 @@ export const About = () => {
               <h4 className="text-3xl font-black">24/7</h4>
               <p className="text-sm uppercase font-bold text-slate-500">Gym Access</p>
             </div>
-          </div>
+          </motion.div>
         </div>
-        <div className="relative">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="relative"
+        >
           <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/20 rounded-full blur-3xl"></div>
           <img 
             className="rounded-xl shadow-2xl relative z-10 w-full object-cover aspect-square md:aspect-auto h-[500px]" 
@@ -31,7 +43,7 @@ export const About = () => {
             alt="Athlete Training"
             referrerPolicy="no-referrer"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

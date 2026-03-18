@@ -12,11 +12,11 @@ interface InputProps extends React.ComponentPropsWithoutRef<'input'> {
 export const Input = ({ label, className = '', error, ...props }: InputProps) => {
   return (
     <div className="space-y-2">
-      <label className="text-sm font-bold uppercase tracking-wide text-slate-500 block">
+      <label className="text-sm font-bold uppercase tracking-wide text-slate-500 dark:text-[#f0ebe3]/80 block">
         {label}
       </label>
       <input
-        className={`w-full px-4 py-3 rounded border bg-white dark:bg-slate-800 dark:border-slate-700 dark:text-white focus:ring-2 outline-none transition-all ${className}`}
+        className={`w-full px-4 py-3 rounded border bg-white dark:bg-[#080808] border-slate-200 dark:border-[#3d3322] text-slate-900 dark:text-[#f0ebe3] dark:placeholder:text-[#f0ebe3]/40 focus:ring-2 focus:ring-primary/50 outline-none transition-all ${className}`}
         style={
           error
             ? { borderColor: '#f87171', boxShadow: '0 0 0 2px rgba(248, 113, 113, 0.3)' }
@@ -45,11 +45,11 @@ interface TextareaProps extends React.ComponentPropsWithoutRef<'textarea'> {
 export const Textarea = ({ label, className = '', error, ...props }: TextareaProps) => {
   return (
     <div className="space-y-2">
-      <label className="text-sm font-bold uppercase tracking-wide text-slate-500 block">
+      <label className="text-sm font-bold uppercase tracking-wide text-slate-500 dark:text-[#f0ebe3]/80 block">
         {label}
       </label>
       <textarea
-        className={`w-full px-4 py-3 rounded border bg-white dark:bg-slate-800 dark:border-slate-700 dark:text-white focus:ring-2 outline-none transition-all ${className}`}
+        className={`w-full px-4 py-3 rounded border bg-white dark:bg-[#080808] border-slate-200 dark:border-[#3d3322] text-slate-900 dark:text-[#f0ebe3] dark:placeholder:text-[#f0ebe3]/40 focus:ring-2 focus:ring-primary/50 outline-none transition-all ${className}`}
         style={
           error
             ? { borderColor: '#f87171', boxShadow: '0 0 0 2px rgba(248, 113, 113, 0.3)' }

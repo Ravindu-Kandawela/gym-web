@@ -85,4 +85,24 @@ export const trainers = [
     specialty: 'HIIT Specialist',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAR0o7qkQu49YNlhGHgDFZFU32MhU_HGu5Egy0w_7M_Ij5CHHSuduzhde4zJpEtIK_ljkybkDzfZMd-cPsm_jbGdp1REMkPzQK94EBIs0QMSjtzlzv2jmtgvKI0T1E3ofpgBQV0MsTmu-5PYBZm18kvu95kIJoAi5LGHK4T-Hzpb3K7OvBQX0cTMHcQrYLHo1w5oA_WLtXwzx7ya9pHX8tcOrQdvkJlQK-cdzuQYvOIL7s1jvHwpvAxI1vUOnA-fZGQaV68szPG2FoF',
   },
+  {
+    name: 'Sarah Jenkins',
+    specialty: 'CrossFit Coach',
+    image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    name: 'David Chen',
+    specialty: 'Powerlifting',
+    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    name: 'Anita Patel',
+    specialty: 'Pilates Instructor',
+    image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+  },
+  {
+    name: 'Michael Ross',
+    specialty: 'Boxing & Core',
+    image: 'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+  },
 ];

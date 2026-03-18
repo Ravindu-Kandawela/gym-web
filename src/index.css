@@ -256,9 +256,9 @@ html, body {
 
 @theme {
   --font-sans: "Lexend", ui-sans-serif, system-ui, sans-serif;
-  --color-primary: #f2df0d;
-  --color-background-light: #f8f8f5;
-  --color-background-dark: #222110;
+  --color-primary: #d4a017;
+  --color-background-light: #f0ebe3;
+  --color-background-dark: #3d3322;
 }
 
 @layer base {
