@@ -1,54 +1,43 @@
-# React + TypeScript + Vite
+Project Name:
+Apex Fitness Gym Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Tech Stack:
 
-Currently, two official plugins are available:
+I built this project using some of my favorite modern web tools:
+- React 19 and TypeScript: For building a solid, type-safe UI under the hood.
+- Vite: Because fast local development is a must.
+- Tailwind CSS v4: Used heavily for styling the sleek dark mode, spacing, and responsive layouts.
+- Lenis: For buttery smooth, momentum-based page scrolling.
+- Motion: To give the site that premium, dynamic feel with scroll animations.
+- Zod and Sonner: Zod handles the form validation perfectly, and Sonner pops up those nice little toast notifications when you submit.
+- EmailJS: Hooked this up to the contact form so it fires off real emails to both the admin and the user.
+- Lucide React: For crisp, lightweight SVG icons.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+How to Run It Locally:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+If you want to pull this down and run it on your own machine, it is super easy.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Clone the repo
+git clone https://github.com/Ravindu-Kandawela/gym-web.git
+cd gym-web
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install the dependencies
+npm install
+(or yarn install)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. Set up your environment variables
+Since the contact form uses EmailJS, you will need your own API keys. I left an .env.example file you can copy to .env using:
+cp .env.example .env
+Open up that new .env file and drop in your EmailJS Service ID, Template IDs, and Public Key.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+4. Start the dev server
+npm run dev
+(or yarn dev)
+Pop open your browser to http://localhost:5173 and you are good to go.
+
+
+Live Link:
+
+You can check out the live site running here:
+[Insert Your Live Link Here]

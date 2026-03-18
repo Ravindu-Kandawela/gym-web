@@ -1,9 +1,9 @@
-import React from 'react';
+
 import { SectionHeader } from '../../components/ui/SectionHeader';
 
 export const About = () => {
   return (
-    <section className="py-24 px-6 md:px-20 bg-white" id="about">
+    <section className="py-24 px-6 md:px-20 bg-white dark:bg-slate-950 transition-colors duration-300" id="about">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div className="space-y-6">
           <SectionHeader 
