@@ -1,27 +1,17 @@
-import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'motion/react';
+
 import { services } from '../../constants/constant';
 import { Card } from '../../components/ui/card';
 import { SectionHeader } from '../../components/ui/SectionHeader';
 import servicesBg from '../../assets/Macthing_to_this_color_pallate_2k_delpmaspu.png';
 
 export const Services = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
-
   return (
-    <section ref={sectionRef} className="relative py-24 px-6 md:px-20 overflow-hidden" id="services">
-      {/* True Mobile Parallax Background Image */}
-      <div className="absolute inset-0 z-0">
-        <motion.img 
-          style={{ y, top: "-25%", height: "150%" }}
-          className="absolute w-full object-cover" 
-          src={servicesBg}
-          alt="Services Parallax"
-        />
-        <div className="absolute inset-0 bg-background-light/40 dark:bg-[#080808]/40 transition-colors"></div>
-      </div>
+    <section className="relative py-24 px-6 md:px-20 overflow-hidden" id="services">
+      {/* Parallax Background Image */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: `url(${servicesBg})` }}
+      />
 
       {/* Content */}
       <div className="relative z-10">

@@ -1,5 +1,5 @@
 import { useRef, useState, useMemo } from 'react';
-import { motion, AnimatePresence, useScroll, useTransform } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Share2, Info, ChevronLeft, ChevronRight, ArrowRight, Search } from 'lucide-react';
 import { trainers } from '../../constants/constant';
 import { SectionHeader } from '../../components/ui/SectionHeader';
@@ -7,12 +7,8 @@ import trainersBg from '../../assets/Modern_luxury_gym_interior_background_for_t
 
 export const Trainers = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const sectionRef = useRef<HTMLElement>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [filterSpecialty, setFilterSpecialty] = useState('All');
-
-  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start end", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -40,17 +36,12 @@ export const Trainers = () => {
   }, [searchTerm, filterSpecialty]);
 
   return (
-    <section ref={sectionRef} className="relative py-24 px-6 md:px-20 overflow-hidden" id="trainers">
-      {/* True Parallax Background Image */}
-      <div className="absolute inset-0 z-0">
-        <motion.img 
-          style={{ y, top: "-25%", height: "150%" }}
-          className="absolute w-full object-cover" 
-          src={trainersBg}
-          alt="Trainers Background"
-        />
-        <div className="absolute inset-0 bg-[#080808]/70 backdrop-blur-[2px]"></div>
-      </div>
+    <section className="relative py-24 px-6 md:px-20 overflow-hidden" id="trainers">
+      {/* Parallax Background Image */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-fixed"
+        style={{ backgroundImage: `url(${trainersBg})` }}
+      />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto">
