@@ -6,6 +6,7 @@ import { Services } from './pages/services/services';
 import { Membership } from './pages/membership/membership';
 import { Trainers } from './pages/trainers/trainers';
 import { Contact } from './pages/contact/contact';
+import { Footer } from './pages/footer/footer';
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         <Membership />
         <Trainers />
         <Contact />
-
+        <Footer />
       </main>
       <Toaster position="top-right" richColors />
     </div>
